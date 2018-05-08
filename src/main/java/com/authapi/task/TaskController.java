@@ -1,4 +1,4 @@
-package com.auth0.samples.authapi.task;
+package com.authapi.task;
 
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.DeleteMapping;

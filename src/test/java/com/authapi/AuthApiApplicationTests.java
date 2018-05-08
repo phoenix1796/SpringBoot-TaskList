@@ -1,4 +1,4 @@
-package com.auth0.samples.authapi;
+package com.authapi;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

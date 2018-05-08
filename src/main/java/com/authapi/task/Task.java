@@ -1,4 +1,4 @@
-package com.auth0.samples.authapi.task;
+package com.authapi.task;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
