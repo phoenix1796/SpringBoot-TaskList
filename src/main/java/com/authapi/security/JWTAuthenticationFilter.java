@@ -50,9 +50,11 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     String token = Jwts.builder().setSubject(((User) auth.getPrincipal()).getUsername())
         .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
         .signWith(SignatureAlgorithm.HS512, SECRET.getBytes()).compact();
-    res.getWriter().write(token);
+    String resJson = new String("{\"token\":\"" + token.toString() + "\"}");
+    res.getWriter().write(resJson);
     res.getWriter().flush();
     res.getWriter().close();
+    res.addHeader("Content-Type", "application/json");
     res.addHeader(HEADER_STRING, TOKEN_PREFIX + token);
   }
 }

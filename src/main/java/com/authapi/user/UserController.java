@@ -27,7 +27,9 @@ public class UserController {
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 		applicationUserRepository.save(user);
 		// Send a message to signify successfull creation or updation
-		res.getWriter().write("{'message':'OK'}");
+
+		res.addHeader("Content-Type", "application/json");
+		res.getWriter().write("{\"message\":\"OK\"}");
 		res.getWriter().flush();
 		res.getWriter().close();
 
