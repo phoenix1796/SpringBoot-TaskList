@@ -8,14 +8,10 @@ import javax.persistence.Id;
 @Entity
 public class ApplicationUser {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	// @GeneratedValue(strategy = GenerationType.IDENTITY)
+	// private long id;
 	private String username;
 	private String password;
-
-	public long getId() {
-		return id;
-	}
 
 	public String getUsername() {
 		return username;
